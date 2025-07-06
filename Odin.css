@@ -1,0 +1,262 @@
+@font-face {
+  font-family: iceland;
+  src: url(./fonts/Iceland-Regular.ttf);
+  font-weight: 400;
+}
+
+/* .iceland-font {
+  font-family: iceland, sans-serif;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+  font-family: iceland, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(127, 255, 0, 0.7);
+  width: 15%;
+  height: 100vh;
+  padding: 2%;
+  position: fixed;
+}
+
+#dashboard {
+  padding-bottom: 10%;
+}
+
+#sidebar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-main {
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+main {
+  display: grid;
+  max-width: 100%;
+  width: 85%;
+  height: 100vh;
+  margin-left: 15%;
+}
+
+#main-header {
+  /* Layout and Display Properties */
+  display: grid;
+  grid-template-rows: 50% 50%;
+
+  /* Box Model Properties */
+  width: 100%;
+  height: 100px;
+  min-height: 56px;
+  padding: 10px 20px;
+
+  /* Color and Background Properties */
+  background-color: #ff89c8;
+
+  /* Decorative Properties */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+#header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 350px;
+  margin: 0 12px;
+  gap: 0.5rem;
+}
+
+#search-container input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f2f5;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+#search-container input:focus {
+  outline: none;
+  background-color: #e4e6e9;
+}
+
+#header-user {
+  display: flex;
+  padding-right: 75px;
+}
+
+#header-user div {
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+#header-user div:hover {
+  color: #16d261;
+}
+
+#header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0 12px;
+}
+
+#header-user-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+#profile-pic {
+  padding-top: 7px;
+  font-size: 30px;
+}
+
+#header-user-info {
+  line-height: 0.75;
+}
+
+#header-buttons {
+  padding-right: 75px;
+}
+
+#header-actions button {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: 1rem;
+}
+
+#header-actions button:hover {
+  background-color: #4f46e5;
+}
+
+#main-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+#project-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 15px;
+  gap: 15px;
+}
+
+.items {
+  display: grid;
+  border-left: 8px solid #8a0edc;
+  grid-template-rows: auto 1fr auto;
+  background-color: mistyrose;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.items:hover {
+  transform: scale(1.05);
+}
+
+.items > div {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+
+.items > p {
+  line-height: 1.05;
+}
+
+.items > div > div {
+  font-size: x-large;
+}
+
+#main-aside {
+  width: 100%;
+}
+
+#announcements {
+  background-color: #d9eaeb;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#announcements > div {
+  padding: 10px;
+}
+
+#announcements > div > p {
+  line-height: 1.05;
+  font-size: medium;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 4px 5px 4px 5px; /* Top Right Bottom Left */
+  background: #333;
+  background-image: linear-gradient(to right, #d9eaeb, #c70a0a, #d9eaeb);
+}
+
+#trending {
+  background-color: #d9eaeb;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#trending > div {
+  display: flex;
+  padding: 10px 10px 0 10px;
+}
+
+.trending-icons {
+  font-size: 30px;
+  padding: 10px 10px 0 10px;
+}
+
+.trending-text {
+  padding: 10px 10px 0 0;
+  line-height: 1.05;
+}
